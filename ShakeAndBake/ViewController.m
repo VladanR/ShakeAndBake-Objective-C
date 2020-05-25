@@ -52,6 +52,19 @@
     if (timeValue == 10) {
         gameTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateCounter) userInfo:nil repeats:YES];
         gameMode = 1;
+        self.startButton.enabled = NO;
+        self.startButton.alpha = 0.25;
+    }
+    
+    if (timeValue == 0) {
+        timeValue = 10;
+        scoreValue = 0;
+        imageIndex = 1;
+        
+        self.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"Face%i",imageIndex]];
+        [self.startButton setTitle:@"Start shaking!" forState:UIControlStateNormal];
+        self.timeLabel.text = [NSString stringWithFormat:@"%i", timeValue];
+        self.scoreLabel.text = [NSString stringWithFormat:@"%i", scoreValue];
     }
     
 }
@@ -63,6 +76,10 @@
     if (timeValue == 0) {
         [gameTimer invalidate];
         gameMode = 0;
+        
+        self.startButton.enabled = YES;
+        self.startButton.alpha = 1.0;
+        [self.startButton setTitle:@"Restart!" forState:UIControlStateNormal];
     }
 }
 

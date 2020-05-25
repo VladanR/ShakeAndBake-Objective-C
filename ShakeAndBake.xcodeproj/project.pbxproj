@@ -12,11 +12,11 @@
 		BCE3C7082479C971001EAE29 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE3C7072479C971001EAE29 /* ViewController.m */; };
 		BCE3C70B2479C971001EAE29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE3C7092479C971001EAE29 /* Main.storyboard */; };
 		BCE3C70E2479C971001EAE29 /* ShakeAndBake.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BCE3C70C2479C971001EAE29 /* ShakeAndBake.xcdatamodeld */; };
-		BCE3C7102479C974001EAE29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE3C70F2479C974001EAE29 /* Assets.xcassets */; };
 		BCE3C7132479C974001EAE29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE3C7112479C974001EAE29 /* LaunchScreen.storyboard */; };
 		BCE3C7162479C974001EAE29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE3C7152479C974001EAE29 /* main.m */; };
 		BCE3C7202479C974001EAE29 /* ShakeAndBakeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE3C71F2479C974001EAE29 /* ShakeAndBakeTests.m */; };
 		BCE3C72B2479C974001EAE29 /* ShakeAndBakeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE3C72A2479C974001EAE29 /* ShakeAndBakeUITests.m */; };
+		BCE3C739247BD43B001EAE29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE3C738247BD43B001EAE29 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +46,6 @@
 		BCE3C7072479C971001EAE29 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BCE3C70A2479C971001EAE29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BCE3C70D2479C971001EAE29 /* ShakeAndBake.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShakeAndBake.xcdatamodel; sourceTree = "<group>"; };
-		BCE3C70F2479C974001EAE29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCE3C7122479C974001EAE29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCE3C7142479C974001EAE29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCE3C7152479C974001EAE29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 		BCE3C7262479C974001EAE29 /* ShakeAndBakeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShakeAndBakeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE3C72A2479C974001EAE29 /* ShakeAndBakeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShakeAndBakeUITests.m; sourceTree = "<group>"; };
 		BCE3C72C2479C974001EAE29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCE3C738247BD43B001EAE29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../Downloads/ShakeGestures/ShakeGestures/Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +113,7 @@
 				BCE3C7062479C971001EAE29 /* ViewController.h */,
 				BCE3C7072479C971001EAE29 /* ViewController.m */,
 				BCE3C7092479C971001EAE29 /* Main.storyboard */,
-				BCE3C70F2479C974001EAE29 /* Assets.xcassets */,
+				BCE3C738247BD43B001EAE29 /* Assets.xcassets */,
 				BCE3C7112479C974001EAE29 /* LaunchScreen.storyboard */,
 				BCE3C7142479C974001EAE29 /* Info.plist */,
 				BCE3C7152479C974001EAE29 /* main.m */,
@@ -244,7 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCE3C7132479C974001EAE29 /* LaunchScreen.storyboard in Resources */,
-				BCE3C7102479C974001EAE29 /* Assets.xcassets in Resources */,
+				BCE3C739247BD43B001EAE29 /* Assets.xcassets in Resources */,
 				BCE3C70B2479C971001EAE29 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,5 +19,14 @@
     // Do any additional setup after loading the view.
 }
 
+-(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    
+    if (event.subtype == UIEventSubtypeMotionShake) {
+        
+        self.infoLabel.text = @"Shake, shake, shake, pour some milk! :)";
+        
+    }
+    
+}
 
 @end

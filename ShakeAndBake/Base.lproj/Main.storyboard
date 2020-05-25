@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,21 +12,95 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CL1-Jj-LBi">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Khv-Ql-esU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Toe-en-3fT">
+                                <rect key="frame" x="43" y="699" width="289" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="OXA-XB-WhM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="45"/>
+                                <state key="normal" title="Start Shaking!">
+                                    <color key="titleColor" red="0.23921568630000001" green="0.69411764710000001" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FNY-gO-Ozy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zn6-TV-vZO">
+                                <rect key="frame" x="43" y="289.66666666666669" width="289" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="YIP-w0-ucm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="50"/>
+                                <color key="textColor" red="0.4039215686" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhW-oJ-9ZP">
+                                <rect key="frame" x="43" y="618" width="289" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="3za-Y5-I1B"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="50"/>
+                                <color key="textColor" red="0.4039215686" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Face1" translatesAutoresizingMaskIntoConstraints="NO" id="ydz-To-1ZD">
+                                <rect key="frame" x="43" y="369.66666666666669" width="289" height="240.33333333333331"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake and Bake" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="ey0-Yj-dzn">
+                                <rect key="frame" x="43" y="78.999999999999986" width="289" height="151.66666666666663"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ey0-Yj-dzn" secondAttribute="height" multiplier="82:43" id="hKp-oP-zPP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="45"/>
+                                <color key="textColor" red="0.4039215686" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Zn6-TV-vZO" firstAttribute="top" secondItem="ey0-Yj-dzn" secondAttribute="bottom" constant="59" id="9Xc-kK-oa7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xhW-oJ-9ZP" secondAttribute="trailing" constant="43" id="B71-06-agV"/>
+                            <constraint firstAttribute="bottom" secondItem="Khv-Ql-esU" secondAttribute="bottom" id="FUs-TT-pHD"/>
+                            <constraint firstItem="Toe-en-3fT" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Jds-mK-2aN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zn6-TV-vZO" secondAttribute="trailing" constant="43" id="LYG-8M-xHk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ey0-Yj-dzn" secondAttribute="trailing" constant="43" id="Ozh-Kn-Iip"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Khv-Ql-esU" secondAttribute="trailing" id="PqH-pk-YXm"/>
+                            <constraint firstItem="xhW-oJ-9ZP" firstAttribute="top" secondItem="ydz-To-1ZD" secondAttribute="bottom" constant="8" id="VSo-IA-yQ1"/>
+                            <constraint firstItem="ydz-To-1ZD" firstAttribute="top" secondItem="Zn6-TV-vZO" secondAttribute="bottom" constant="8" id="YPw-2Q-qOf"/>
+                            <constraint firstItem="Khv-Ql-esU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="da8-I7-MeQ"/>
+                            <constraint firstItem="ey0-Yj-dzn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="eND-aL-Rvb"/>
+                            <constraint firstItem="ydz-To-1ZD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="43" id="eal-NI-ys2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ydz-To-1ZD" secondAttribute="trailing" constant="43" id="eqt-HP-ryP"/>
+                            <constraint firstItem="Toe-en-3fT" firstAttribute="top" secondItem="xhW-oJ-9ZP" secondAttribute="bottom" constant="8" id="gVl-aG-8S2"/>
+                            <constraint firstItem="xhW-oJ-9ZP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="43" id="lNS-HW-M7o"/>
+                            <constraint firstItem="Khv-Ql-esU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qPU-Gk-XeM"/>
+                            <constraint firstItem="Toe-en-3fT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="43" id="sud-6f-o71"/>
+                            <constraint firstItem="Zn6-TV-vZO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="43" id="uVD-EW-Ma0"/>
+                            <constraint firstItem="ey0-Yj-dzn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="43" id="wtd-Ai-yBa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Toe-en-3fT" secondAttribute="trailing" constant="43" id="yUB-fE-uPY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="ydz-To-1ZD" id="zJQ-xv-2An"/>
+                        <outlet property="scoreLabel" destination="xhW-oJ-9ZP" id="eIb-7q-1Th"/>
+                        <outlet property="startButton" destination="Toe-en-3fT" id="j78-VJ-Ssm"/>
+                        <outlet property="timeLabel" destination="Zn6-TV-vZO" id="haj-kj-vMI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="1920" height="1080"/>
+        <image name="Face1" width="512" height="512"/>
+    </resources>
 </document>

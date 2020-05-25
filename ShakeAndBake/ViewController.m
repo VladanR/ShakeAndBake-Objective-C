@@ -17,16 +17,70 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    timeValue = 10;
+    scoreValue = 0;
+    
+    gameMode = 0;
+    imageIndex = 1;
+    
+    self.timeLabel.text = [NSString stringWithFormat:@"%i", timeValue];
+    self.scoreLabel.text = [NSString stringWithFormat:@"%i", scoreValue];
 }
 
 -(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     
     if (event.subtype == UIEventSubtypeMotionShake) {
+        if (gameMode == 1) {
+            scoreValue +=1;
+            self.scoreLabel.text = [NSString stringWithFormat:@"%i", scoreValue];
+            
+            imageIndex += 1;
+            if (imageIndex == 12) {
+                imageIndex = 1;
+            }
+            self.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"Face%i",imageIndex]];
+        }
         
-        self.infoLabel.text = @"Shake, shake, shake, pour some milk! :)";
         
     }
     
+}
+
+- (IBAction)startGame:(id)sender {
+
+    if (timeValue == 10) {
+        gameTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateCounter) userInfo:nil repeats:YES];
+        gameMode = 1;
+        self.startButton.enabled = NO;
+        self.startButton.alpha = 0.25;
+    }
+    
+    if (timeValue == 0) {
+        timeValue = 10;
+        scoreValue = 0;
+        imageIndex = 1;
+        
+        self.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"Face%i",imageIndex]];
+        [self.startButton setTitle:@"Start shaking!" forState:UIControlStateNormal];
+        self.timeLabel.text = [NSString stringWithFormat:@"%i", timeValue];
+        self.scoreLabel.text = [NSString stringWithFormat:@"%i", scoreValue];
+    }
+    
+}
+
+-(void)updateCounter {
+    timeValue -=1;
+    self.timeLabel.text = [NSString stringWithFormat:@"%i", timeValue];
+    
+    if (timeValue == 0) {
+        [gameTimer invalidate];
+        gameMode = 0;
+        
+        self.startButton.enabled = YES;
+        self.startButton.alpha = 1.0;
+        [self.startButton setTitle:@"Restart!" forState:UIControlStateNormal];
+    }
 }
 
 @end
